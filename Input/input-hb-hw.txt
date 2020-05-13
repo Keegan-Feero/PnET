@@ -1,0 +1,96 @@
+PnET runs at 14:04, 02/28/2013				
+==============================================================================				
+Model options:				
+1				Mode type
+3				Model type
+==============================================================================				
+Site settings:				
+44				Latitude
+0				Ozone effect
+1				CO2 effect
+0				Absolute N content
+1700				Simulated years from
+2012				Simulated years to
+C:\pnet\PNET\Case\HB\HB_Climate.txt           				Climate file name
+12				Water hold capacity,cm
+13				Snow pack,cm
+12				Soil Water, cm
+0				Soil moisture factor
+0.1				Fast flow fraction
+0.04				Water realease factor
+1				Water stress
+13500				Humus mass, g/M2
+390				Humus N mass, g/M2
+0.01				Soil NH4 content, g/M2
+0.075				Humus decomposition constant
+27.46				Soil respiration factor A
+0.068				Soil respiration factor B
+151				N immobolization factor A
+-35				N immobolization factor B
+==============================================================================				
+Tree settings:				
+2				ForestCode
+80				Forest age
+0				Leaf mass
+20000				Wood mass
+11300				Dead Wood mass
+6				Root mass
+135				BudC
+300				WoodC
+900				PlantC
+1				PlantN
+1.4				N Ratio
+-46				AmaxA
+71.9				AmaxB
+145				HalfSat
+0.1				BaseFolRespFrac
+2				RespQ10
+4				PsnTMin
+24				PsnTOpt
+0.75				AmaxFrac
+1				FolReten
+100				SLWmax, 'g dry matter/m2 leaf
+0.2				SLWdel, 'g dry matter/(m2 leaf * g leaf mass)
+100				GDDFolStart
+900				GDDFolEnd
+900				GDDWoodStart
+1600				GDDWoodEnd
+270				SenescStart
+340				Max leaf mass
+0				Min leaf mass
+0.58				k
+2				FolNCon, by weight
+0.95				FolRelGrowMax, '/yr
+0.45				CFracBiomass
+0				RootAllocA
+2				RootAllocB
+0.25				GRespFrac
+0.07				WoodMRFrc
+1				RootMRespFrc
+0.75				PlantCReserveFrac
+1				MinWoodFolRatio
+0.05				DVPD1
+2				DVPD2
+10.9				WUEConst
+0.11				PrecIntFrac
+0.009				FLPctN
+0.012				RLPctN
+0.002				WLPctN
+0.6				FolNConRange
+0.5				FolNRetrans
+20				MaxNStore
+0.025				WoodTurnover
+0.789				RootTurnoverA
+0.191				RootTurnoverB
+0.021				RootTurnoverC
+0.1				WoodLitLossRate
+0.8				WoodLitCLoss
+==============================================================================				
+Management settings:				
+0				Total number of disturbance
+0				Agriculture from year
+0				Agriculture to year
+0				Agriculture removal fraction
+0	0			Fertilization from year and DOY
+0	0			Fertilization to year and DOY
+0	0	0		Fertilization rate for NH4 | NO3 | Urea
