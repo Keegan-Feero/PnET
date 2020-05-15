@@ -53,8 +53,7 @@ To navigate Windows Powershell or Git Bash we will need to know some basic comma
 `cd ..` **change directory to parent directory.** e.g.) from **C:/Users** to **C:/** <br/>
 `ls` **list files** in the directory <br/>
 `mkdir` **make new directory**
-***
-
+<br/>
 1. In VScode, click on the `Terminal` tab and then click `New terminal`. This will launch a new **Windows Powershell** within VScode. Alternatively, this could be done in Powershell outside VScode or in [Git Bash](https://git-scm.com/downloads). 
 2. Within your terminal of choice (Powershell or Bash), navigate to the **~/PNET_C1/pnet_linux** directory, which contains all the **.cpp** files we need to compile to run PnET. See [Navigate the terminal](#navigate-the-terminal) for need-to-know terminal commands.
 3. In the terminal, type `g++ -o executable *.cpp` and press enter. <br/>
