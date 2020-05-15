@@ -47,7 +47,6 @@ We will also need a compiler to convert *human-readable* source code into *compu
 ### From VSCode
 ### From the terminal 
 ###### Navigate the terminal crashcourse
-To navigate Windows Powershell or Git Bash we will need to know some basic commands:<br/>
 `pwd` **print working directy** <br/>
 `cd` **change directory** e.g.) `cd C:/Users/` will bring you from **C:/** to **C:/Users/** <br/>
 `cd ..` **change directory to parent directory.** e.g.) from **C:/Users** to **C:/** <br/>
