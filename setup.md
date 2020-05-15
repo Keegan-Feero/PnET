@@ -3,7 +3,7 @@
 ### Table of Contents
 * [Download PnET](#download-pnet)
 * [Install MinGW compiler](#install-mingw-compiler)
-* [Install  and conifgure Visual Studio Code](#install-visual-studio-code-editor)
+* [Install and conifgure Visual Studio Code](#install-and-configure-visual-studio-code)
 
 * [Compiling and executing](#compiling-and-executing) 
   + [From VSCode](#from-vscode)
@@ -17,11 +17,6 @@ These directions are for the PnET-Daily C++ Version. For more model choices, and
 1. Download the PnET repository by clicking the green `Clone or download` button on the PnET repo page.Similarly, you can clone this repo to your own GitHub page. 
 2.  The downloaded zip will be called PnET-master.zip. Extract the contents in your location of choice on your computer.
 
-***
-### Install Visual Studio Code editor
-If we want to modify the PnET C++ code we will want some sort of code editor or integrated development environment (IDE). A good choice is **Visual Studio Code**.
-1. Download the [Windows](https://code.visualstudio.com/download) installer, and install with the generic settings.
-2. Once VScode is up and running, search for and download the `C/C++ extension` from the Extension View (Ctrl+Shift+X). 
 ***
 ### Install MinGW compiler
 We will also need a compiler to convert *human-readable* source code into *computer-executable* machine code. For Windows, a common choice is a version of MinGW called **Mingw-w64**. 
@@ -42,6 +37,11 @@ We will also need a compiler to convert *human-readable* source code into *compu
      and
     `gdb --version`.
     + For each of these, a disclaimer about the software should pop up. If this fails, doublecheck the environment path settings described in step 2. 
+***
+### Install and configure Visual Studio Code
+If we want to modify the PnET C++ code we will want some sort of code editor or integrated development environment (IDE). A good choice is **Visual Studio Code**.
+1. Download the [Windows](https://code.visualstudio.com/download) installer, and install with the generic settings.
+2. Once VScode is up and running, search for and download the `C/C++ extension` from the Extension View (Ctrl+Shift+X). 
 ***
 ### Compiling and executing
 #### From VSCode
