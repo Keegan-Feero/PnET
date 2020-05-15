@@ -1,16 +1,16 @@
-# PnET --
+# Getting setup to run PnET on Windows10
+[**note:** we need someone to translate this to Mac and Linux OS]
 ### Table of Contents
-* [Getting setup to run PnET on Windows10](#getting-setup-to-run-pnet-on-windows10)
-  + [Download PnET](#download-pnet)
-  + [Install Visual Studio Code editor](#install-visual-studio-code-editor)
-  + [Install MinGW compiler](#install-mingw-compiler)
+* [Download PnET](#download-pnet)
+* [Install MinGW compiler](#install-mingw-compiler)
+* [Install  and conifgure Visual Studio Code](#install-visual-studio-code-editor)
+
 * [Compiling and executing](#compiling-and-executing) 
   + [From VSCode](#from-vscode)
   + [From the terminal](#from-the-terminal)
 ***
 ***
-## Getting setup to run PnET on Windows10
-[**note:** we need someone to translate this to Mac and Linux OS]
+
 ### Download PnET 
 These directions are for the PnET-Daily C++ Version. For more model choices, and more information go to the [PnET Website](http://www.pnet.sr.unh.edu/). 
 
@@ -43,9 +43,9 @@ We will also need a compiler to convert *human-readable* source code into *compu
     `gdb --version`.
     + For each of these, a disclaimer about the software should pop up. If this fails, doublecheck the environment path settings described in step 2. 
 ***
-## Compiling and executing
-### From VSCode
-### From the terminal 
+### Compiling and executing
+#### From VSCode
+#### From the terminal 
 ###### Navigate the terminal crashcourse
 `pwd` **print working directy** <br/>
 `cd` **change directory** e.g.) `cd C:/Users/` will bring you from **C:/** to **C:/Users/** <br/>
