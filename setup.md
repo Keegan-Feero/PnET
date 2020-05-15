@@ -5,7 +5,8 @@
   + [Install Visual Studio Code editor](#install-visual-studio-code-editor)
   + [Install MinGW compiler](#install-mingw-compiler)
 * [Compiling and executing](#compiling-and-executing) 
-  + [Navigate the terminal](#navigate-the-terminal)
+  + [From VSCode](#from-vscode)
+  + [From the terminal](#from-the-terminal)
 ***
 ***
 ## Getting setup to run PnET on Windows10
@@ -13,8 +14,8 @@
 ### Download PnET 
 These directions are for the PnET-Daily C++ Version. For more model choices, and more information go to the [PnET Website](http://www.pnet.sr.unh.edu/). 
 
-1. Download the PnET repository by clicking the green `Clone or download` button on the PnET repo page. Similarly, you can clone this repo to your own GitHub page. 
-2. Extract the .zip contents in your location of choice on your computer.
+1. Download the PnET repository by clicking the green `Clone or download` button on the PnET repo page.Similarly, you can clone this repo to your own GitHub page. 
+2.  The downloaded zip will be called PnET-master.zip. Extract the contents in your location of choice on your computer.
 
 ***
 ### Install Visual Studio Code editor
@@ -43,16 +44,9 @@ We will also need a compiler to convert *human-readable* source code into *compu
     + For each of these, a disclaimer about the software should pop up. If this fails, doublecheck the environment path settings described in step 2. 
 ***
 ## Compiling and executing
-*Not sure where this should live, but it's important.* In brief, these instruction describe how to compile multiple C++ code files (.cpp) in an executable, and then execute. We'll need to do this once we modify the PnET code.  
-
-To successfully navigate the Windows Powershell
-1. In VScode, click on the `Terminal` tab and then click `New terminal`. This will launch a new **Windows Powershell** within VScode. Alternatively, this could be done in Powershell outside VScode or in [Git Bash](https://git-scm.com/downloads). 
-2. Within your terminal of choice (Powershell or Bash), navigate to the **~/PNET_C1/pnet_linux** directory, which contains all the **.cpp** files we need to compile to run PnET. See [Navigate the terminal](#navigate-the-terminal) for need-to-know terminal commands.
-3. In the terminal, type `g++ -o executable *.cpp` and press enter. <br/>
-*executable* can be changed. It's the name assigned to the compiled **.exe.**. Currently, as downloaded there is an executable called **pnet.exe** in **./Pnet_C1/pnet_linux**. *If we change any Pnet Code we need to re-compile before running the model*. <br/>
-The \*.cpp indicates that the compiler should select *all* .cpp files in the directory. We could compile a single .cpp file just calling `g++ somefile.cpp`, but PnET is comprised of many .cpp files linked together, so they must be compiled together. 
-4. To execute the compiled script, type `./executable` and press enter. You'll see the printed output of PnET in the terminal, and if you go to the **./PNET_C1/Result/Site** you'll see the generated **Output_monthly.csv**.
-##### Navigate the terminal
+### From VSCode
+### From the terminal 
+###### Navigate the terminal crashcourse
 To navigate Windows Powershell or Git Bash we will need to know some basic commands:<br/>
 `pwd` **print working directy** <br/>
 `cd` **change directory** e.g.) `cd C:/Users/` will bring you from **C:/** to **C:/Users/** <br/>
@@ -60,3 +54,11 @@ To navigate Windows Powershell or Git Bash we will need to know some basic comma
 `ls` **list files** in the directory <br/>
 `mkdir` **make new directory**
 ***
+
+1. In VScode, click on the `Terminal` tab and then click `New terminal`. This will launch a new **Windows Powershell** within VScode. Alternatively, this could be done in Powershell outside VScode or in [Git Bash](https://git-scm.com/downloads). 
+2. Within your terminal of choice (Powershell or Bash), navigate to the **~/PNET_C1/pnet_linux** directory, which contains all the **.cpp** files we need to compile to run PnET. See [Navigate the terminal](#navigate-the-terminal) for need-to-know terminal commands.
+3. In the terminal, type `g++ -o executable *.cpp` and press enter. <br/>
+*executable* can be changed. It's the name assigned to the compiled **.exe.**. Currently, as downloaded there is an executable called **pnet.exe** in **./Pnet_C1/pnet_linux**. *If we change any Pnet Code we need to re-compile before running the model*. <br/>
+The \*.cpp indicates that the compiler should select *all* .cpp files in the directory. We could compile a single .cpp file just calling `g++ somefile.cpp`, but PnET is comprised of many .cpp files linked together, so they must be compiled together. 
+4. To execute the compiled script, type `./executable` and press enter. You'll see the printed output of PnET in the terminal, and if you go to the **./PNET_C1/Result/Site** you'll see the generated **Output_monthly.csv**.
+
