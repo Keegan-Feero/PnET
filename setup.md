@@ -1,6 +1,5 @@
 # PnET --
 ### Table of Contents
-* [What is PnET](#what-is-pnet)
 * [Getting setup to run PnET on Windows10](#getting-setup-to-run-pnet-on-windows10)
   + [Download PnET](#download-pnet)
   + [Install Visual Studio Code editor](#install-visual-studio-code-editor)
@@ -8,19 +7,15 @@
 * [Compiling and executing](#compiling-and-executing) 
   + [Navigate the terminal](#navigate-the-terminal)
 ***
-## What is PnET
-
-PnET model description goes here:
-
 ***
 ## Getting setup to run PnET on Windows10
+[**note:** we need someone to translate this to Mac and Linux OS]
 ### Download PnET 
-PnET can be downloaded from the [PnET Website](http://www.pnet.sr.unh.edu/). There are multiple versions of PnET available for download. There are also different source codes available. PnET can be downloaded in C++, MATLAB, or Visual Basic. However, C++ is the most supported source code and that's what we'll proceed with here:
-1. Click on the `Download` tab at the top of the homescreen
-2. Click on the model version that you're interested in. For now, `PnET-Daily (C++ Version)` is a good choice to download. This will download a .zip containing the files we'll need to get the model running. 
-3. Extract the .zip contents to the directory of your choice. 
+These directions are for the PnET-Daily C++ Version. For more model choices, and more information go to the [PnET Website](http://www.pnet.sr.unh.edu/). 
 
-In exploring the contents of PnET you'll notice there are multiple folders...
+1. Download the PnET repository by clicking the green `Clone or download` button on the PnET repo page. Similarly, you can clone this repo to your own GitHub page. 
+2. Extract the .zip contents in your location of choice on your computer.
+
 ***
 ### Install Visual Studio Code editor
 If we want to modify the PnET C++ code we will want some sort of code editor or integrated development environment (IDE). A good choice is **Visual Studio Code**.
