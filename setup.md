@@ -1,11 +1,10 @@
 # Getting setup to run PnET on Windows10
 [**note:** we need someone to translate this to Mac and Linux OS]
 ### Table of Contents
-* [Download PnET](#download-pnet)
-* [Install MinGW compiler](#install-mingw-compiler)
-* [Install and conifgure Visual Studio Code](#install-and-configure-visual-studio-code)
-
-* [Compiling and executing](#compiling-and-executing) 
++ [Download PnET](#download-pnet)
++ [Install MinGW compiler](#install-mingw-compiler)
++ [Install and configure Visual Studio Code](#install-and-configure-visual-studio-code)
++ [Compiling and executing](#compiling-and-executing) 
   + [From VSCode](#from-vscode)
   + [From the terminal](#from-the-terminal)
 ***
