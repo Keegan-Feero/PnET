@@ -1,5 +1,5 @@
 # Getting setup to run PnET on Windows10
-[**note:** we need someone to translate this to Mac and Linux OS]
+[**note:** we need someone to translate this to Mac and Linux OS] <br/>
 for Jack: https://www.youtube.com/watch?v=I0oNm6u4zUM
 ### Table of Contents
 + [Download PnET](#download-pnet)
@@ -39,7 +39,8 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 2. From the shell, navigate *into* the **Pnet-master** directory. Launch VScode by using the command `code .` 
 3. Once VScode is running, search for and download the `C/C++ extension` from the Extension View (Ctrl+Shift+X). 
 4. On the left side of VScode, use the Explorer drop down to navigate to `pnet_linux` and open `pnet_main.cpp`
-5. Open the `Command Palette` (Ctrl+Shift+P), and in the search bar, type *C/C++: Edit Configurations (UI)
+5. Open the `Command Palette` (Ctrl+Shift+P), and in the search bar, type *C/C++: Edit Configurations (UI)*
+6. Scroll down to `Compiler path`, and where it says `specify a compiler path...` paste in the path to the g++.exe compiler. This is the same path we included for our environment (see above) plus `g++.exe`. Altogether, this will look something like `C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe`
 5. Click the `Terminal` tab at the top of VScode. Click on `Configure Default Build Task...`
 6. A drop-down should appear. Click `shell: g++.exe build active file`. This will open a *tasks.json* file
 
@@ -58,7 +59,7 @@ The \*.cpp indicates that the compiler should select *all* .cpp files in the dir
 4. To execute the compiled script, type `./executable` and press enter. You'll see the printed output of PnET in the terminal, and if you go to the **./PNET_C1/Result/Site** you'll see the generated **Output_monthly.csv**.
 
 #### Shell Navigation Crashcourse
-A shell allows us to access operating system services via command line tools. In Windows, we can use **PowerShell**. Another good option is [Git Bash](https://git-scm.com/downloads). Powershell can also be access from within VScode by clicking on the `Terminal` tab and then click `New terminal`. Here are some need to know commands: <br/>
+The shell allows us to access operating system services via command line tools. In Windows, we can use **PowerShell**. Another good option is [Git Bash](https://git-scm.com/downloads). Powershell can also be access from within VScode by clicking on the `Terminal` tab and then click `New terminal`. Here are some commands that are good to know: <br/>
 `pwd` **print working directy** <br/>
 `cd` **change directory** e.g.) `cd C:/Users/` will bring you from **C:/** to **C:/Users/** <br/>
 `cd ..` **change directory to parent directory.** e.g.) from **C:/Users** to **C:/** <br/>
