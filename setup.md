@@ -49,7 +49,7 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 12. Also under `Args:`, modify the line that says `${fileDirname}\\${fileBasenameNoExtension}.exe` to say `${fileDirname}\\pnet_executable.exe` to compile the pnet_executable. You can name the executable whatever you want.
 
 ### Compiling and executing
-Any time the PnET code or input files are change, we have to compile a new executable program. The section below will step through compiling from VScode or from the terminal.
+Any time the PnET code or input files are change, we have to compile a new executable program. The section below will step through compiling from VScode or from the the shell.
 1. In VScode, click `Terminal`, and then click `Run Build Task...` Alternatively, just press `Ctrl+Shift+B`.
 2. To run the model, there are several options. If you went and looked in the pnet_linux folder, you would see the pnet_executable.exe file. You can click on this to run the program. Or, in the shell navigate into the pnet_linux folder and type the command, `./pnet_executable` to run the compiled model.
 3. Go look in ~/pnet-master/results/site. You should see the generated output csv files.
