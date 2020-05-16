@@ -34,15 +34,19 @@ We will also need a compiler to convert *human-readable* source code into *compu
     `gdb --version`.
     + For each of these, a disclaimer about the software should pop up. If this fails, doublecheck the environment path settings described in step 2. 
 ### Install and configure Visual Studio Code
-VScode is a light-weight and modular code editor that can be configured nicely for PnET model development.
+VScode is a light-weight and modular code editor that can be configured nicely for PnET model development. [This section should probably be broken up somehow]
 1. Download the [Windows](https://code.visualstudio.com/download) installer, and install with the generic settings.
 2. From the shell, navigate *into* the **Pnet-master** directory. Launch VScode by using the command `code .` 
 3. Once VScode is running, search for and download the `C/C++ extension` from the Extension View (Ctrl+Shift+X). 
 4. On the left side of VScode, use the Explorer drop down to navigate to `pnet_linux` and open `pnet_main.cpp`
 5. Open the `Command Palette` (Ctrl+Shift+P), and in the search bar, type *C/C++: Edit Configurations (UI)*
 6. Scroll down to `Compiler path`, and where it says `specify a compiler path...` paste in the path to the g++.exe compiler. This is the same path we included for our environment (see above) plus `g++.exe`. Altogether, this will look something like `C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe`
-5. Click the `Terminal` tab at the top of VScode. Click on `Configure Default Build Task...`
+7. Scoll down to `IntelliSense mode` and set it to `gcc-x64`. All other settings should be fine. Now, on the left hand *Explorer*, there should be a folder called .vscode, and within it a file c_cpp_properties.json. This json file holds the configurations we just set, and we could edit this to make changes, too. 
+8. Next, click the `Terminal` tab at the top of VScode. Click on `Configure Default Build Task...`
 6. A drop-down should appear. Click `shell: g++.exe build active file`. This will open a *tasks.json* file
+7. Confirm that `command` and `cwd` are pointing towards the compiler, paths we have previously set. They should look something like: <br/>
+`"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"` <br/>
+`"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"`
 
 
 ### Compiling and executing
