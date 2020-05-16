@@ -51,10 +51,10 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 ### Compiling and executing
 Any time the PnET code or input files are change, we have to compile a new executable program. The section below will step through compiling from VScode or from the the shell.
 1. In VScode, click `Terminal`, and then click `Run Build Task...` Alternatively, just press `Ctrl+Shift+B`.
-2. To run the model, there are several options. If you went and looked in the pnet_linux folder, you would see the pnet_executable.exe file. You can click on this to run the program. Or, in the shell navigate into the pnet_linux folder and type the command, `./pnet_executable` to run the compiled model.
-3. Go look in ~/pnet-master/results/site. You should see the generated output csv files.
-[Note to self: is there way to run the model GUI style from VScode? Some extension?]
-###### A note on compiling from the shell
+2. To run the model, there are several options. In the shell navigate into the `~pnet-master/pnet_linux` folder and type the command, `./pnet_executable` to run the compiled model. Or, with old-fashioned mouse clicking, go to the `~pnet-master/pnet_linux`folder. You would see the `pnet_executable.exe` file. You can click on this to run the program. [Note to self: is there way to run the model GUI style from VScode? Some extension?]
+3. Go look in `~/pnet-master/results/site`. You should see the generated output csv files.
+
+##### A note on compiling from the shell
 We could also easily compile from the shell:
 1. Navigate into ~/pnet-master/pnet-linux.
 2. Type `g++ -o pnet_executable *.cpp` and press enter. The \*.cpp indicates that the compiler should select *all* .cpp files in the directory. We could compile a single .cpp file just calling `g++ somefile.cpp`, but PnET is comprised of many .cpp files linked together, so they must be compiled together.
