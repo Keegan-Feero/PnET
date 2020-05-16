@@ -41,12 +41,15 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 4. On the left side of VScode, use the Explorer drop down to navigate to `pnet_linux` and open `pnet_main.cpp`
 5. Open the `Command Palette` (Ctrl+Shift+P), and in the search bar, type *C/C++: Edit Configurations (UI)*
 6. Scroll down to `Compiler path`, and where it says `specify a compiler path...` paste in the path to the g++.exe compiler. This is the same path we included for our environment (see above) plus `g++.exe`. Altogether, this will look something like `C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe`
-7. Scoll down to `IntelliSense mode` and set it to `gcc-x64`. All other settings should be fine. Now, on the left hand *Explorer*, there should be a folder called .vscode, and within it a file c_cpp_properties.json. This json file holds the configurations we just set, and we could edit this to make changes, too. 
+7. Scoll down to `IntelliSense mode` and set it to `gcc-x64`. All other settings should be fine. Now, on the left hand *Explorer*, there should be a folder called .vscode, and within it the *c_cpp_properties.json* file. This json file holds the configurations we just set, and we could edit this to make changes, too. 
 8. Next, click the `Terminal` tab at the top of VScode. Click on `Configure Default Build Task...`
-6. A drop-down should appear. Click `shell: g++.exe build active file`. This will open a *tasks.json* file
-7. Confirm that `command` and `cwd` are pointing towards the compiler, paths we have previously set. They should look something like: <br/>
+9. A drop-down should appear. Click `shell: g++.exe build active file`. This will open a *tasks.json* file
+10. Confirm that `command` and `cwd` are pointing towards the compiler, paths we have previously set. They should look something like: <br/>
 `"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"` <br/>
 `"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"`
+11. Under `"Args:`, replace `${file}` with `${workspaceFolder}\\pnet_linux\\*.cpp` to tell vscode to build all .cpp files in the pnet_linux folder. 
+12. Also under `Args:`, modify the line that says `${fileDirname}\\${fileBasenameNoExtension}.exe` to say `${fileDirname}\\pnet_executable.exe` to compile the pnet_executable. You can name the executable whatever you want.
+13. In the shell navigate into the pnet_linux folder and type the command, `./pnet_executable` to run the compiled model 
 
 
 ### Compiling and executing
