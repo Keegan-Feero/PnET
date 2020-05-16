@@ -6,8 +6,6 @@ for Jack: https://www.youtube.com/watch?v=I0oNm6u4zUM
 + [Install MinGW compiler](#install-mingw-compiler)
 + [Install and configure Visual Studio Code](#install-and-configure-visual-studio-code)
 + [Compiling and executing](#compiling-and-executing) 
-  + [From VSCode](#from-vscode)
-  + [From the shell](#from-the-shell)
 + [Shell Navigation Crashcourse](#shell-navigation-crashcourse)
 ### Download PnET 
 These directions are for the C++ Version of PnET-Daily. For more model choices, and more information go to the [PnET Website](http://www.pnet.sr.unh.edu/). 
@@ -47,23 +45,22 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 10. Confirm that `command` and `cwd` are pointing towards the compiler, paths we have previously set. They should look something like: <br/>
 `"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"` <br/>
 `"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"`
-11. Under `"Args:`, replace `${file}` with `${workspaceFolder}\\pnet_linux\\*.cpp` to tell vscode to build all .cpp files in the pnet_linux folder. 
+11. Under `"Args:`, replace `${file}` with `${workspaceFolder}\\pnet_linux\\*.cpp` to tell vscode to build all .cpp files in the pnet_linux folder. [note to self: there must be a more generic way to include the pnet_linux in the workspace or paths.]
 12. Also under `Args:`, modify the line that says `${fileDirname}\\${fileBasenameNoExtension}.exe` to say `${fileDirname}\\pnet_executable.exe` to compile the pnet_executable. You can name the executable whatever you want.
-13. In the shell navigate into the pnet_linux folder and type the command, `./pnet_executable` to run the compiled model 
-
 
 ### Compiling and executing
 Any time the PnET code or input files are change, we have to compile a new executable program. The section below will step through compiling from VScode or from the terminal.
-#### From VSCode
-#### From the shell 
+1. In VScode, click `Terminal`, and then click `Run Build Task...` Alternatively, just press `Ctrl+Shift+B`.
+2. To run the model, there are several options. If you went and looked in the pnet_linux folder, you would see the pnet_executable.exe file. You can click on this to run the program. Or, in the shell navigate into the pnet_linux folder and type the command, `./pnet_executable` to run the compiled model.
+3. Go look in ~/pnet-master/results/site. You should see the generated output csv files.
+[Note to self: is there way to run the model GUI style from VScode? Some extension?]
+###### A note on compiling from the shell
+We could also easily compile from the shell:
+1. Navigate into ~/pnet-master/pnet-linux.
+2. Type `g++ -o pnet_executable *.cpp` and press enter. The \*.cpp indicates that the compiler should select *all* .cpp files in the directory. We could compile a single .cpp file just calling `g++ somefile.cpp`, but PnET is comprised of many .cpp files linked together, so they must be compiled together.
+3. Run the exectuatable like described above: `./pnet_executable`
 
 
-1. In VScode, click on the `Terminal` tab and then click `New terminal`. This will launch a new **Windows Powershell** within VScode. Alternatively, this could be done in Powershell outside VScode or in [Git Bash](https://git-scm.com/downloads). 
-2. Within your terminal of choice (Powershell or Bash), navigate to the **~/PNET_C1/pnet_linux** directory, which contains all the **.cpp** files we need to compile to run PnET. See [Navigate the terminal](#navigate-the-terminal) for need-to-know terminal commands.
-3. In the terminal, type `g++ -o executable *.cpp` and press enter. <br/>
-*executable* can be changed. It's the name assigned to the compiled **.exe.**. Currently, as downloaded there is an executable called **pnet.exe** in **./Pnet_C1/pnet_linux**. *If we change any Pnet Code we need to re-compile before running the model*. <br/>
-The \*.cpp indicates that the compiler should select *all* .cpp files in the directory. We could compile a single .cpp file just calling `g++ somefile.cpp`, but PnET is comprised of many .cpp files linked together, so they must be compiled together. 
-4. To execute the compiled script, type `./executable` and press enter. You'll see the printed output of PnET in the terminal, and if you go to the **./PNET_C1/Result/Site** you'll see the generated **Output_monthly.csv**.
 
 #### Shell Navigation Crashcourse
 The shell allows us to access operating system services via command line tools. In Windows, we can use **PowerShell**. Another good option is [Git Bash](https://git-scm.com/downloads). Powershell can also be access from within VScode by clicking on the `Terminal` tab and then click `New terminal`. Here are some commands that are good to know: <br/>
