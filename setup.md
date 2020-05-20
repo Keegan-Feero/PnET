@@ -41,12 +41,13 @@ VScode is a light-weight and modular code editor that can be configured nicely f
 6. Scroll down to `Compiler path`, and where it says `specify a compiler path...` paste in the path to the g++.exe compiler. This is the same path we included for our environment (see above) plus `g++.exe`. Altogether, this will look something like `C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe`
 7. Scoll down to `IntelliSense mode` and set it to `gcc-x64`. All other settings should be fine. Now, on the left hand *Explorer*, there should be a folder called .vscode, and within it the *c_cpp_properties.json* file. This json file holds the configurations we just set, and we could edit this to make changes, too. 
 8. Next, click the `Terminal` tab at the top of VScode. Click on `Configure Default Build Task...`
-9. A drop-down should appear. Click `shell: g++.exe build active file`. This will open a *tasks.json* file
+9. A drop-down should appear where you have the option to click on `shell: g++.exe build active file`. This will open a tasks.json file. If you do not have this option, go to step 13.
 10. Confirm that `command` and `cwd` are pointing towards the compiler, paths we have previously set. They should look something like: <br/>
 `"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"` <br/>
 `"cwd": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"`
 11. Under `"Args:`, replace `${file}` with `${workspaceFolder}\\pnet_linux\\*.cpp` to tell vscode to build all .cpp files in the pnet_linux folder. [note to self: there must be a more generic way to include the pnet_linux in the workspace or paths.]
 12. Also under `Args:`, modify the line that says `${fileDirname}\\${fileBasenameNoExtension}.exe` to say `${fileDirname}\\pnet_executable.exe` to compile the pnet_executable. You can name the executable whatever you want.
+13. If under `Configure Default Build Task...` you are given the option to `Create a new tasks.json file from a template`, select this to open a tasks.json. In the pnet github repository there is a folder called `vscode_config_example`. Copy this tasks.json file to replace the one in vscode. Change command and cwd to point towards your compiler (see step 10)
 
 ### Compiling and executing
 Any time the PnET code or input files are change, we have to compile a new executable program. The section below will step through compiling from VScode or from the the shell.
