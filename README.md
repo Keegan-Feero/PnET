@@ -4,5 +4,5 @@ PnET is a suite of three nested computer models which provide a modular approach
 
 
 
-**Check out `setup.md` for detailed instructions on getting PnET running**
+**Check out `setup.md` for detailed instructions on getting PnET running***
 
